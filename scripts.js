@@ -332,4 +332,4 @@ m = (m < 10) ? "0" + m : m;
    document.querySelector('.value').innerHTML = JSON.stringify(resJson.weather[0].description);
 } )
 
-  .then(resJson => console.log(resJson ));
+  
