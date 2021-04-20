@@ -20,7 +20,7 @@ body {
 
   color: var(--text-primary);
   background: var(--bg);
-  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  
   margin: 0;
   padding: 0;
   font-family: "roboto";
@@ -518,23 +518,18 @@ top: 0;
 
 /*------------------------------------------title--------------------------------------*/
 header{
-  padding-top: 2rem;
+  display: block;
+  padding-top: 5rem;
   position: relative;
   z-index: -5;
   border: 1px solid var(--border-color);
   background: var(--bg-nav);
-  height: 22vh;
+  height: 20vh;
   text-align: center;
-  font-size: clamp(1.5rem, 1.5vw, 2rem);
-    margin: 0;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+    
   color: var(--text-secondary); 
-    h1 h2{
-      
-      margin-top: 0;
-      
-      
-
-    }  
+     
 
 }
 
@@ -544,13 +539,20 @@ header{
  
 @media only screen and (max-width: 600px) {
   .title{
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 }
 
 
 @media only screen and (min-width: 600px) {
   .title{
+    h1 h2{
+      
+      margin-top: 2rem;
+      
+      
+
+    } 
    margin-top: 5rem;
   }
 }
@@ -568,7 +570,7 @@ header{
 /*-------------------------------------------hero---------------------------------------------*/
 .hero {
   position: relative;
- top:20%;
+ 
   svg{
     scroll-margin-top: 22rem;}
  
@@ -577,17 +579,25 @@ header{
 }
 
 
-@media only screen and (min-width: 1020px) {
-  .hero{
-    top:0;
-    height: 80%;
-    
-  }
-}
+
 
 
 .top-container{
   background:radial-gradient(var(--sky1),var(--sky2) );
+}
+
+@media screen and(min-width:1020px){
+.top-container{
+width: 60%;
+
+}
+
+
+  .hero{
+display: grid;
+    
+    place-items: center;
+  }
 }
 
 /*-------------------------------------------main---------------------------------------------*/
@@ -599,7 +609,7 @@ header{
 }
 
 .middle-title{
-  top: 5rem;
+  top: 0;
   min-height: 30vh;
   display: block;
   clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
@@ -611,7 +621,7 @@ header{
   color:var(--text) ;
   
   
-  h2{font-size: clamp(2.5rem, 5.5vw, 4rem);
+  h2{font-size: clamp(1.5rem, 1.5vw, 3rem);
     margin: 0;}
 }
 
@@ -644,8 +654,8 @@ img {
   
   text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  grid-gap: 1ch;
-  padding-bottom: 5rem;
+  grid-gap: 3ch;
+  padding-bottom: 2rem;
   
 
   .snapshots {
@@ -653,13 +663,14 @@ img {
     margin: 3rem 0;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 4rem 7rem;
     grid-template-areas:
       "a a a"
       "b b c";
     
    h1, a
-    {
+    {padding: 0;
+      margin: 0;
       text-decoration:none;
       color: var(--text);
       grid-area: a;
@@ -728,7 +739,7 @@ img {
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  
   width: 94%;
   margin: 0 auto;
   
@@ -739,12 +750,12 @@ textarea {
   display: block;
   min-height: 2rem;
 
-  border: 1px solid black;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-  border-radius: 5px;
+  border: 2px solid black;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 4px;
   background-image: none;
-  background-color: var(--gray2);
+  background-color: var(--nav);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -771,8 +782,8 @@ textarea {
   &-card {
     flex: 1 0 auto;
     border-radius: 2px;
-    border: 2px solid var(--border);
-    background-color: var(--gray2);
+    border: 2px solid white;
+    background-color: var(--blue1);
     justify-content: space-between;
     flex-direction: column;
 
@@ -798,11 +809,11 @@ textarea {
       padding-bottom: 35%;
     }
     &__email{
-      background-color: var(--bg-nav) ;
-      border: 1px solid black;
-      border-bottom: 1px solid white;
-      border-right: 1px solid white;
-      border-radius: 4px;
+      background-color:var(--blue1) ;
+      border: 2px solid black;
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
+      border-radius: 2px;
       min-height: 2.5rem;
     }
 
@@ -876,9 +887,18 @@ textarea {
 }
 
 
-
-
-
+@media only screen and (min-width: 1020px) {
+.text-container {
+  padding-top: 1em;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 74%;
+  margin: 0 auto;
+  
+}
+}
 
 
 
@@ -931,8 +951,8 @@ textarea {
 }
 .sky-box{
   display: block;
-  background-color:  var(--bg);;
-  z-index: 3;
+  
+  z-index: 1;
   min-height: 38vh;
 }
 .ether{
@@ -959,7 +979,7 @@ textarea {
 #celestial-body{
   
   svg{
-
+    z-index: 1;
     position: relative;
     display: block;
   }
@@ -967,7 +987,7 @@ textarea {
 
  
 top: 3rem;
-left: 38rem;
+margin-top: 8rem;
 margin-left: 8rem;
 border-radius: 50%;
 border-width: 0px;
@@ -1299,25 +1319,16 @@ box-shadow: hsl(210, 6%, 93%) 0 0 5em;
 
 
 
-@media only screen and (max-width: 700px) {
-  .ether{
-    
-    height: 15vh;
-  
-  
-  
-  }
-  #celestial-body{top: -4rem;
-    margin-left: 17rem;}
-}
+
 @media only screen and (min-width: 1100px) {
   .ether{
-    margin-left: 42rem;
-    height: 15vh;
+    margin-left: 22rem;
+    height: 8vh;
   
   
   
-  }
+  }#celestial-body{top: -4rem;
+    margin-left: 17rem;}
 }
 .color1 {
   stop-color:var(--sand1);
@@ -1331,14 +1342,20 @@ box-shadow: hsl(210, 6%, 93%) 0 0 5em;
 
 
 .path {
+  svg {z-index: 2;
+    height: 22rem;
+    top: 5rem;
 
-  height: 230px;
-  bottom: -10px;
-  top: 115px;
-  /*background:linear-gradient(to bottom, transparent, rgba(24, 24, 24, 0.885)),repeat-x;*/
-  position: absolute;
-  
-  z-index: 2;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    
+
+
+  }
+ 
 }
 #front {
   
@@ -1383,16 +1400,18 @@ box-shadow: hsl(210, 6%, 93%) 0 0 5em;
 
 
 .background {
-  svg {
-    height: 240px;
-    top: 200px;
 
+  
+  svg {
+    height: 25rem;
+    top: 1rem;
+z-index: 1;
 
     position: absolute;
     bottom: 0px;
     left: 0;
     right: 0;
-    z-index: 1;
+    
 
 
   }
@@ -1431,17 +1450,49 @@ box-shadow: hsl(210, 6%, 93%) 0 0 5em;
 
 .car {
 
-  
 
-  svg {
+ #car {
     
     position: absolute;
     z-index: 3;
     width: 100px;
-    left: 145px;
+    left: 9.07rem;
     bottom: 30px;
     animation: car 1500ms linear infinite paused;
   }
+  .back-wheel {
+position: absolute;
+    left: 9.46rem;
+        bottom: -192px;
+      
+    }
+    
+    .front-wheel {
+     
+        
+    
+      left: 13.58rem;
+        bottom: -192px;
+    
+      
+    }
+    
+    .wheel {
+    
+       position: absolute;
+        z-index: 3;
+        width: 1.6rem;
+        --animn:wheel;
+        
+        
+        
+        --animps:paused;  
+        
+    
+      
+    }
+
+  
 
   
 
@@ -1463,37 +1514,7 @@ box-shadow: hsl(210, 6%, 93%) 0 0 5em;
 
 
 
-.back-wheel {
 
-left: 152.4px;
-    bottom: -192px;
-  
-}
-
-.front-wheel {
- 
-    
-
- left: 218.4px;
-    bottom: -192px;
-
-  
-}
-
-.wheel {
-
-   position: absolute;
-    z-index: 3;
-    width: 24px;
-    --animn:wheel;
-    
-    
-    
-    --animps:paused;  
-    
-
-  
-}
 
 
 @keyframes wheel {
@@ -1542,7 +1563,7 @@ left: 152.4px;
           var(--animdur, 1s)
           
           var(--animc,infinite)
-          
+          var(--animfm,none)
           var(--animtf, linear) 
           
           var(--animps, paused);
@@ -1560,37 +1581,64 @@ left: 152.4px;
   background-color: cornflowerblue;
 }
 
-.meteo{
-  background-color: var(--bg);
+.meteo{--animfm:forwards;
+  --animc:1;
+  --animn:meteo;
+  --animdur:8s;
+  
+  --animtf:ease-in-out;
+  
+  opacity: 0;
   text-align: center;
-  font-size: clamp(1.8rem, 1.8vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.4vw, 3.2rem);
   font-family: "roboto";
   font-weight: 600;
   color: var(--text);
-  z-index: -10;
+  z-index: 1;
   position: relative;
-  left:5rem;
-  bottom: 5rem;
   
+   
+
+   
   span{
     
     font-family: "Poppins";
     font-weight: 500;
-    text-align: right;}
+    }
 }
 
 
  
-@media only screen and (max-width: 600px) {
-  .meteo{
-    margin-right: 15rem;
-    
 
-  }
+
+@media only screen and (min-width: 860px){
+  .meteo{
+    display: block;
+    position: relative;
+    bottom: -8rem;
+   
+    
+   }
+}
+
+@media only screen and (min-width: 1020px){
+  .meteo{
+    display: block;
+    position: relative;
+    bottom: -5.2rem;
+    
+    
+   }
 }
 
 
-
+@keyframes meteo {
+  
+  to {
+    transform: translateY(-26rem);
+    opacity: 1;
+      }
+}
 
 .footer-section{
    
@@ -1674,8 +1722,8 @@ left: 152.4px;
   --yellow: hsl(56, 100%, 70%);
   --grass:hsl(59, 69%, 25%);
   --tree:hsl(103, 69%, 14%);
-  --sand1:hsl(56, 76%, 90%);
-  --sand2:hsl(56, 76%, 65%);
+  --sand1:hsl(49, 93%, 51%);
+  --sand2:hsl(49, 93%, 91%);
   --river:hsl(180, 100%, 85%);
   .img1{
     filter: grayscale(80%)
@@ -1683,7 +1731,7 @@ left: 152.4px;
 }
 
 .light {
-  --bg: var(--sand1);
+  --bg: var(--sand2);
   --bg-nav: radial-gradient(var(--sky3) , var(--blue1));
   --bg-dropdown: var(--gray0);
   --text: var(--gray6);
@@ -1720,6 +1768,7 @@ left: 152.4px;
 }
 
 .solar {
+  --blue1:hsl(24, 90%, 16%);
   --gray0: hsl(56, 100%, 92%);
   --gray1: hsl(61, 74%, 89%);
   --gray2: hsl(49, 56%, 45%);
