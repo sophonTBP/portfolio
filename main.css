@@ -567,7 +567,7 @@ textarea {
   border-right: 1px solid white;
   border-radius: 5px;
   background-image: none;
-  background-color: var(--bg-nav);
+  background-color: var(--gray2);
   box-shadow: none;
   resize: none;
 }
