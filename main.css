@@ -311,7 +311,7 @@ main {
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     background: var(--bg-secondary);
     font-size: 1.3rem;
     letter-spacing: 0.3ch;
@@ -400,7 +400,7 @@ header {
   height: 20vh;
   text-align: center;
   font-size: clamp(1rem, 1.5vw, 3rem);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .title {
