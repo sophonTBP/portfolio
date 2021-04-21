@@ -1614,7 +1614,7 @@ position: absolute;
   .meteo{
     display: block;
     position: relative;
-    bottom: -8rem;
+    bottom: 8rem;
    
     
    }
@@ -1623,6 +1623,7 @@ position: absolute;
 @media only screen and (min-width: 1020px){
   .meteo{
     display: block;
+    margin-right: 13rem;
     position: relative;
     bottom: -5.2rem;
     
