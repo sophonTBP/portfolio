@@ -1184,7 +1184,7 @@ textarea:focus {
 
 @keyframes meteo {
   to {
-    transform: translateY(-26rem);
+    transform: translateY(-16rem);
     opacity: 1;
   }
 }
